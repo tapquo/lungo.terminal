@@ -15,7 +15,7 @@ class BuildCommand
     jsFiles = findAllFilesByExtension(appFolderName, JS_EXTENSION)
     cssFiles = findAllFilesByExtension(appFolderName, CSS_EXTENSION)
 
-    return console.log("Files to compile were not found.") unless jsFiles.length and cssFiles.length
+    return console.log("Files to compile were not found.") unless jsFiles.length or cssFiles.length
 
     makeBuildFolder()
     minifyFiles(projectName, 'gcc', jsFiles, JS_EXTENSION)
