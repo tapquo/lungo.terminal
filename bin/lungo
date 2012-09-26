@@ -1,0 +1,23 @@
+#!/usr/bin/env coffee
+nopt = require "nopt"
+path = require "path"
+pkg = require path.join(__dirname, "..", "package.json")
+lungo = require "../src"
+
+class Lungo
+  @run: ->
+    process.title = "lungo"
+    options = nopt({}, {}, process.argv)
+    return console.log(pkg.version) if options.version
+
+    lungo.commands[getCommandName(options)].execute(params: options.argv.remain, flags: options)
+
+  getCommandName = (options) ->
+    command = options.argv?.remain.shift()
+
+    if commandExists(command) then command else 'help'
+
+  commandExists = (command) ->
+    command and Object.keys(lungo.commands).indexOf(command) isnt -1
+
+Lungo.run()

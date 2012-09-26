@@ -1,0 +1,19 @@
+{
+  "name": "lungo",
+  "description": "-",
+  "version": "0.1.0",
+  "author": "Javi Jiménez Villar",
+  "main": "lib",
+  "engines": { "node": ">= 0.8.0" },
+  "dependencies": {
+    "coffee-script": "1.3.3",
+    "bower" :  "latest",
+    "node-static": "latest",
+    "shelljs" : "latest",
+    "nopt" : "latest",
+    "node-minify": "latest",
+    "hogan.js" : "latest"
+  },
+  "bin": { "lungo": "./bin/lungo" },
+  "preferGlobal": true
+}
