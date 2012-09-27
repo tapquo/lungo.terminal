@@ -1,11 +1,13 @@
-{exec} = require 'child_process'
+bower = require 'bower'
 
 class UpdateCommand
   @execute: (options) ->
     packageName = options.params[0]
 
-    exec "bower update #{packageName}", (error, stdout) ->
-      throw error if error
-      console.log stdout
+    bower.commands['update']([packageName]).on("data", (data) ->
+      data and console.log data
+    ).on("end", (data) ->
+      data and console.log data
+    ).on "error", (err) -> throw err if err
 
 module.exports = UpdateCommand

@@ -1,13 +1,13 @@
-nopt = require 'nopt'
-{exec} = require 'child_process'
+bower = require 'bower'
 
 class InstallCommand
-
   @execute: (options) ->
     packageName = options.params[0]
 
-    exec "bower install #{packageName}", (error, stdout) ->
-      throw error if error
-      console.log(stdout)
+    bower.commands['install']([packageName]).on("data", (data) ->
+      data and console.log data
+    ).on("end", (data) ->
+      data and console.log data
+    ).on "error", (err) -> throw err if err
 
 module.exports = InstallCommand
