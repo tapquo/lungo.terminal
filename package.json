@@ -1,7 +1,7 @@
 {
   "name": "lungo",
   "description": "Lungo Command Line Tool",
-  "version": "0.1.2 ",
+  "version": "0.1.2",
   "author": "Javi Jiménez Villar",
   "main": "lib",
   "engines": { "node": ">= 0.8.0" },
