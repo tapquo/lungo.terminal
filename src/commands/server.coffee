@@ -17,6 +17,6 @@ class ServerCommand
     ).listen SERVER_PORT
 
   printStaticFileServerStatus = ->
-    console.log("Serving lungo project at http://127.0.0.1:#{SERVER_PORT}");
+    console.log("Serving Lungo project at http://127.0.0.1:#{SERVER_PORT} ...");
 
 module.exports = ServerCommand

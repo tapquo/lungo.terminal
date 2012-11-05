@@ -1,10 +1,10 @@
 {
   "name": "lungo",
   "description": "Lungo Command Line Tool",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "Javi Jiménez Villar",
   "main": "lib",
-  "engines": { "node": ">= 0.8.14" },
+  "engines": { "node": ">= 0.8" },
   "repository": {
     "type": "git",
     "url": "https://github.com/TapQuo/lungo.command.line.git"

@@ -1,7 +1,9 @@
 module.exports =
   help: require("./help")
-  install: require("./install")
-  update: require("./update")
   init: require("./init")
-  build: require("./build")
+  add: require("./install")
+  update: require("./update")
+  # remove: require("./uninstall")
+
   server: require("./server")
+  build: require("./build")
