@@ -6,16 +6,43 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="cleartype" content="on">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://lungo.tapquo.com/resources/icon@2x.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://lungo.tapquo.com/resources/icon-72.png">
-    <link rel="apple-touch-icon-precomposed" href="http://lungo.tapquo.com/resources/icon.png">
-    <link rel="apple-touch-startup-image" href="http://lungo.tapquo.com/resources/default.png">
+
+    <!-- iPhone -->
+    <link href="http://lungo.tapquo.com/resources/icon-57.png" sizes="57x57" rel="apple-touch-icon">
+    <link href="http://lungo.tapquo.com/resources/startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px)
+             and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+    <!-- iPhone (Retina) -->
+    <link href="http://lungo.tapquo.com/resources/icon-114.png" sizes="114x114" rel="apple-touch-icon">
+    <link href="http://lungo.tapquo.com/resources/startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px)
+             and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- iPhone 5 -->
+    <link href="http://lungo.tapquo.com/resources/startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px)
+             and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- iPad -->
+    <link href="http://lungo.tapquo.com/resources/icon-72.png" sizes="72x72" rel="apple-touch-icon">
+    <link href="http://lungo.tapquo.com/resources/startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px)
+             and (orientation: portrait)
+             and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+    <link href="http://lungo.tapquo.com/resources/startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px)
+             and (orientation: landscape)
+             and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+    <!-- iPad (Retina) -->
+    <link href="http://lungo.tapquo.com/resources/icon-144.png" sizes="144x144" rel="apple-touch-icon">
+    <link href="http://lungo.tapquo.com/resources/startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px)
+             and (orientation: portrait)
+             and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="http://lungo.tapquo.com/resources/startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px)
+             and (orientation: landscape)
+             and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
 
     <!-- Lungo - Stylesheets -->
     <link rel="stylesheet" href="components/lungo/lungo.css">
@@ -25,25 +52,24 @@
 </head>
 
 <body class="app">
+
+
     <section id="main" data-transition="slide">
-        <header  class="">
-            <nav class="left button">
+        <header data-title="{{name}}">
+            <nav class="left box">
                 <a href="#features" data-router="aside" data-icon="menu"></a>
             </nav>
-            <nav class="right button">
-                <a href="#second" data-router="section" data-icon="share" data-label="Section" ></a>
+            <nav class="right box">
+                <a href="#second" data-router="section" data-icon="share"></a>
             </nav>
-            <div class="left">
-                <span class="title">{{name}}</span>
-            </div>
         </header>
 
         <article id="main-article" class="list indented scroll">
             <ul>
-                <li class="contrast">
+                <li class="dark">
                     <strong>
-                    A framework for developers who want to design, build and share cross device apps.
-                </strong>
+                        A framework for developers who want to design, build and share cross device apps.
+                    </strong>
                 </li>
                 <li data-icon="brand html5" class="feature">
                     <strong>HTML5 Optimized Apps</strong>
@@ -64,21 +90,41 @@
             </ul>
         </article>
 
-        <article id="second-article">
+        <article id="second-article" class="list">
+            <li class="highlight">
+                <strong>
+                    A framework for developers who want to design, build and share cross device apps.
+                </strong>
+            </li>
         </article>
     </section>
 
+
     <section id="second" data-transition="slide">
         <header data-title="Second section">
-            <nav class="button">
-                <a href="#back" data-router="section" data-label="back"></a>
+            <nav class="box">
+                <a href="#back" data-router="section" data-icon="home"></a>
+            </nav>
+            <nav class="right box">
+                <a href="#third" data-router="section" data-icon="up" data-label="Section"></a>
             </nav>
         </header>
         <article></article>
     </section>
 
+
+    <section id="third" data-transition="cover">
+        <header data-title="Third section">
+            <nav class="right box">
+                <a href="#back" data-router="section" data-label="Close"></a>
+            </nav>
+        </header>
+        <article></article>
+    </section>
+
+
     <aside id="features">
-        <header data-title="Features"></header>
+        <header data-title="Options"></header>
         <article class="list">
             <ul>
                 <li class="current">
